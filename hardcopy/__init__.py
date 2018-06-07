@@ -16,6 +16,7 @@ def file_to_pdf(input_file, output_file, **extra_args):
     chrome_args = [
         hc_settings.CHROME_PATH,
         '--headless',
+        '--no-sandbox',
         '--print-to-pdf="{}"'.format(output_file.name),
         '--disable-gpu',  # Required by chrome's headless mode for now
     ]
