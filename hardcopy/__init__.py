@@ -69,6 +69,7 @@ def file_to_png(input_file, output_file, width, height, **extra_args):
     chrome_args = [
         hc_settings.CHROME_PATH,
         '--headless',
+        '--no-sandbox',
         '--screenshot="{}"'.format(output_file.name),
         '--window-size={},{}'.format(width, height),
         '--disable-gpu',  # Required by chrome's headless mode for now
